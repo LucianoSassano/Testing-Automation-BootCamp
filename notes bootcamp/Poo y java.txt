@@ -1,0 +1,50 @@
+anottations :proveen informacion sobre un programa que no es parte del programa mismo
+no tienen efecto directo en la operacion del codigo que anotan.
+usos: 1-info para el compilador 
+      2-compile-time and deployment-time processing
+      3-Runtme processing
+ej:@override
+
+StringBuffer :es thread safe and synchronized
+StringBuilder:no es thread safe ;es mas rapido que StringBuffer
+method append :concatena los diferentes string 
+Mutable y no Mutable :diferencia.
+Clases genericas:Se pueden decalrar con varios tipos ej T,R....
+
+Collections:conjunto de objetos que me pemitrena mi disntintos tipos de operaciones para manipular esa info.
+.Queue:FIFO order;puede ser definido como una lista ordenada.Es una cola.
+.List:es una interfaz ;ordenado por posicion ,puede tener duplicados.*
+.Set:representa un conjunto desordenado de elementos el cual no permite duplicados*
+
+.Map:no es una collection,en el mapa tengo una relacion clave-valor,no es una subclase de la interfaz collection
+
+.Clase Optional:reprsenta una alternativa para no devolver un NULL sino un optional;el optional puede ser un valor o un vacio pero 
+no voy a tener que chequear por un NULL.*
+
+-Los utilizo para evaluar condiciones y yo elijo que me retorna.
+
+.Predicate: representan funciones de un  solo argumento que me devuelven un boolean.lo utilizo cuando tengo que evaluar multiples condiciones
+
+.Functions:representan una funcion de un solo arguemento pero retorna un resultado de un tipo arbitrario.*
+
+expresiones lambda*
+
+.Stream:se utiiza para procesar colecciones de objetos;es una secuncia de objetos que soporta varios metodosque pueden see canalizados
+para producir el resultado esperado.puedo convertir un List,Set y Queue en un Stream.
+
+Metodo filter* me sirve para filtrar ciertos datos que cumplen con una condicion.Me devuelve un stream con los datos filtrados.
+allMatch*
+.collect Collectors.joining<",">-->me devuelve un String 
+.collect Collectors.toList-->me devuelve una lista. 
+.map*<mapear>
+.findFirst--> me devuelve un optional.Esto me permite trabajar con un valor por defecto.*El hecho de que me devuelva un optional me permite preguntar 
+si el objeto se encuentra o de no ser asi tomar decisiones .
+.findAll*
+
+Optional<String> o = cities.stream))
+
+ver el decompilador de codigo de intelij
+
+Maven basic commands or maven goals*
+Archivo Pom.xml*
+Nameing conventions java*

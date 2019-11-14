@@ -1,0 +1,45 @@
+Test Runners:
+Se utilizan para configurar o definir y correr un conjunto de test.
+Cada test en una suite es un metodo o funcion y la suite es una clase o un archivo en particular<dependiendo del lenguaje en particular>
+En java , las clases son Suites y los metodos son Test.
+
+TestNG:annotations
+
+***@Test:si lo pongo arriba de un metodo testNG lo reconoce como un test y lo ejecuta.
+tiene propiedades que son atributos<ver documentacion oficial>
+
+Anotaciones a nivel de config<se ejecutan antes del test y depues del test>
+
+@BeforeSuite:funcionalidad se ejecuta una sola vez antes de tque corran todos los test en esta suite.
+@AfterSuite
+@BeforeTest
+@AfterTest
+@BeforeClass
+@AfterClass
+@BeforeMethod
+@AfterMethod
+
+***-Listeners: es una interface que permite modificar el comportamiento de TestNG para acceder a ciertas stages del test execution o runtime.
+Sirve para saver lo que esta pasando con un test en tiempo de ejecucion.
+
+***-Data Providers:Provee de un set de inputs para un cierto test antes de que este se ejecute.
+
+***JUnit:annotations
+mismas anotaciones que TestNG.
+Se manjea mediante categorias y permite ejecutar por grupos pero no utiliza un archivo XML como TestNG.
+***-Rules:
+-Parameters: seria un data provider pero se diferencia en su config.
+
+TestNG:configuracion mediante anotaciones y un archivo xml. default TestNG runner.Supports DDT using @dataprovider non thread safe.
+JuNIT:configuracion mediante anotacionespuedo crear mi propio runner ,supports ddt using @parameters , es thread safe.
+
+***Paralelismo :JUnit corre multiples test con multiples instancias,cada test tiene su instancia de la clase.
+	     TestNG corre multiples test sobre la misma instancia de clase.
+
+Assertions :sirve para hacer validaciones, utility methods to supports validations in tests , son accesibles mediante la class Assert tanto en JUnit
+como en TestNG.
+
+***Hard assertions vs Soft assertions
+
+hard:tira una excepcion inmediatamente cuando la validacion falla y continua con el proximo test.
+Soft:

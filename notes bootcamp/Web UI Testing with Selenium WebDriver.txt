@@ -1,0 +1,84 @@
+DOM: document object model es una interface a un documento HTML.
+Used by browsers as a first step towards determining what to render in the viewport.
+Tree-like structure where the DOM is the stump and all others are branches ands leaves.
+
+When inspecting a layout or web interface the network approach tells us what is happening in the "back"
+for examlple what services ar beeing called.
+
+Locators :es una declaracion /definicion que nos permite identificar o localizar uno o muchos elementos web en una pagina, de aqui el nombre
+localizador.
+
+1.How(stratrgy)to find an elemento:
+
+ 
+.id,name,classname,CSS,XPath,etc ***
+
+Recomendaciones al usar locators , si tiene un id buscamos por id(identificador unico que no cambia),name que si bien no garantiza
+que este sea unico pero usualmente tiende a serlo.
+Al usar XPath,no usar el path completo,debe ser lo mas corto y simple posible (XPath como ultimo elemento).Usar relativos o cutomizados.
+LLevar un tracking de los locators problematicos , tratar de reemplazarlos con el dev team por id unicos pra los atributos.
+
+Selenium WebDriver:
+
+es una libreria para controlar las aplicaciones del browser ,tiene un wrapper que es Appium .
+es una arquitectura del tiplo cliente/servidor, el cliente es lo uqe llamamos la instancia de webdriver 
+y el server es un proceso binario externo que controla al browser.
+
+la comuncacion entre clientes y servidores se hace mediante una sesion usando protocolo HTTP que posee cargas JSON.
+Una sesion comienza cuando un cliente es instanciado.
+
+***Capabilities:
+todas las caracteristicas que quiero que tenga mi browser driver las cuales voy a setear o previamente a su instanciacion.
+
+***WebDriver API: findElement(by.elLocatorPorElQueVoyAbuscar). ver lista de mehodos de WebDriver.getWindowHandle veo como maneja el tema de las ventanas 
+pestañas al momento de clickear algo si me abre en una pestaña nueva o switchea a una nueva ventana.
+driver.quit cierra el driver y todo lo asociado al browser.
+
+**WebElement API.ver lista de metodos.
+Un web element seria cada una de las etiquetas o contenedores en la webpage , el webdriver me permite interactuar con ellos.
+
+Page and Components 
+Component that appears along the site , reusable component.
+
+Component that appears at the same page, but to avoid duplication and favor maintainability is abstracted as a component as well.
+
+***Page Object Model:
+
+TODOS LOS ATRIBUTOS PRIVADOS , YA QUE DEBEN SER VISIBLES UNICAMENTE EN EL PAGE OBJECT MODEL.
+
+example: LOGIN 
+	 ATRIBUTOS:
+	 USERNAME INPUT:WEBELEMENT
+	 PASSWORD INPUT:WEBELEMENT
+	 SIGNIN BUTTON:WEBELEMENT
+  	 --------------------------
+	 COMPORTAMIENTO:
+	 LOGIN(USERNAME:STRING,PASSWORD:STRING); debe devolver un page object o a si mismo.en este caso la nueva pagina ,home ua
+	 isUsernameInputVisible():boolean;
+	
+     Los test interactuan con los page objects y estos a su vez interactuan con el Web Driver.Los test no pueden interactuar 
+     el web driver directamente.Los test realizan las aserciones (assert) exclusivamente.
+
+***CUANDO CREO UN PAGE OBJECT:
+
+Cuando un componente se repite creo un PO para ello.Lo abstraigo en una clase.
+Puedo tener una pagina o una pagina que tiene componentes y estos pueden ser reusables en todo o en una sola pagina.
+
+***PAGE FACTORY :es una extension de PO y sirve para inicializar los webElements.
+EN LA CLASE WEB PAGE instanci los PO con page factory.}}
+
+***Sincronizacion(Selenium Web Driver):debemos decirle a selenium que espere cuando realizo los test.
+3 tipos de "pausas":
+.setImplicitTimeout:recomendado setearlo en cero segundos.
+.pageLoadTimeout:pespera por defecto para que cargue la pagina ,espera al contenido estatico.
+.setScriptTimeout:espera de la ejecucion de JS .
+
+*Exlicit wait:es  una espera inteligente,permite a tu codigo congelar el thread hasta que la condicion que le pasas se resuelve.
+mientras que la condicion retorne false va a seguir tratando y esperando.Para trabajar con las esperas explicitas debo transformar 
+el WebDriver en un WebDriverWait.
+
+*Polling:el tiempo en el que voy a volver a evaluar la condicion.ej si lo seteo en 1 seg cada un segundo evaluo la condicion si es que 
+aun no se cumplio.
+
+*Fluents Wait:si no quiero usar la funcion de Expected condicions utizo espera fluida para crear mis propias condiciones mediante JAVA 
+function.

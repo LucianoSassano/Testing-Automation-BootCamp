@@ -1,0 +1,42 @@
+Mobile testing: needs a device(virtual or real),Multiple devices and SO versions,not always need interner conecction,needs the apk
+and free memory to install it.
+
+Native apps are created for use on a plataform like mobile and tablets.
+Hybrid apps are combinations of native app and web app.
+
+Appium Selectors:Accessibility id ,Android UiAutomator. los que son particularmente de appium .sin css selector (no hay css)
+Appium Capabilities: es lo que le pasamos a appium para pegarle al servidor e iniciar una sesion.
+
+An emulator provides step-by-step debugging of an app.Also, it provides an efficient way for capturing screenshots.
+Testing on a real device has a major advantage that it always give accurate results.
+Emulators are almost free.
+Slower compraed to actual devices but less latency tan real devices connected to the local network or in the cloud. 
+
+No puede simular todos los tipos de interacciones de usuario por lo que a veces lleva a falsos resultados.
+Genymotion es un emulador de android .
+
+comando adb devices muestra si existe algun dispositivo conectado.es propio del android sdk , antes que todo setear la variavle de entorno
+del andoid sdk.con el cmp busco las capabilities que se encuntran logeadas en tiempo real. adb log cat ->buscar cmp, previamente debo abrir
+pa aplicacion que yo quiero.
+
+Platform = mobile;
+Browser = android(capabilities);
+
+ run , edit configuration , Junit , variables de entorno, setear las varibles de arriba;
+
+setear las capabilities en el archivo android yml.
+
+en el appium inpector me logeo usando las capabilities. en Json representation copio las capabilities. 
+ver scroll para mobile.
+
+
+
+
+
+
+
+
+
+
+
+

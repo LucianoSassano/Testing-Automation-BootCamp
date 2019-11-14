@@ -1,0 +1,78 @@
+Protocolo HTTP :es un protocolo de transferencia de texto que 
+
+Key words in http: scheme,authority,path ,query,user info ,host ,port (http protocol).7
+
+.An http client initiates a request by establishing a Transmission Control Protocol (TCP) connection to a particular port in a server.
+.an http server listening on that port waits for a client`s request message.Upon receiving the request, the server sends  back a status 
+line, and a message of its own.
+
+***.HTTP Verbs : 
+.Post->create new resources
+.get->use to read or retrieve a representation of a resource
+.put->utilized for update properties ina an existent resource
+.delete->used to delete the resource from the server.
+
+*****HTTP Status Code:
+.1xx.-Informational:request has been received and the process is continuing.
+ex:100 Continue.
+
+.2xx.-Success:action was successfully received ,understood,and acepted.***
+ex:200 ok
+   201 created.
+   204 No content.
+
+.3xx.-Redirection:action must be taken in order to complete the request.
+ex:305 Use Proxy
+   301 Moved Permanently 
+
+.4xx.-Client Error:request contains incorrect sintax or cannot be fullfilled.***
+ex:400 Bad request
+   401 Unauthorized
+   404 Not found.
+
+.5xx.-Server Error: server failed to fullfill an apparently valid request.***
+ex:500 Internal Server Error.
+   504 Bad gateway
+
+URL/URI: 
+.URL: Uniform Resource Locator.
+URI: Uniform Resource Identifier.
+
+REST: es un estilo de arquitectura de software para implementar servicios.
+1-Client-Server architecture.
+2-Stateless.
+3-Cacheable.
+4-Multiple Layered System.
+5-Representation of resources-URI.
+6-Implementation freedom. puedo utilizar cualquier framework /tecnologia para implementar mi servicio rest.
+
+Json.
+
+PostMan:es una herramienta para realizar testing de integracion con una API.
+
+HTTP Client Libraries:
+.Apache HTTP client.
+.Retrofit.*
+.RestEasy Client.
+.Spring RestTemplate.
+.RestAssured.
+
+Proceso de serializacion y deserializacion --> ej retrofit me convierte un  user en un Json y viceversa.
+dtos.(package) dentro creo mi clase user.creo una clase hija userResponse para manejar los datos que me devuelve el Json.
+services(package) detrno estarian las apis.creo mi interface usersAPI.
+test(package).organizar en sub paquetes de acuerdo al servicio.
+
+anotacion JsonProperty.
+Ver documentacion de Retrofit
+para reallizar la deserealizacion debo agregar la dependecia de jackson-converter.(addConverterFactory).
+crear clase padre abstracta para hacer mi user create y mi instancia de retrofit.BaseServiceClient.
+
+crear branch lsassanoService.
+
+
+
+
+
+
+
+

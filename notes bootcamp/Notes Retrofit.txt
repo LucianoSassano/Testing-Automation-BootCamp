@@ -1,0 +1,33 @@
+DAO->(Data Access Object):es una clase que usualmente tiene operaciones como save,update,delete.(operaciones CRUD)
+la ventaja de la capa(layer) DAO es que si necesitas cambiar el mecanismo de persistencia en un nivel mas bajo solo tenes que cambiar 
+la capa del DAO.
+DTO->(Data Transfer Object):es un objecto que contiene informacion,se utiliza para "exponer" valores.Provee un mecanismo para
+la transferencia de valores a traves de una red o entre diferentes layers de una aplicacion.
+L a ventaja de la capa DTO es que agrega flexibilidad a la capa
+de servicios y subsecuentemente al diseño de la aplicacion entero.
+CRUD Operations : es un acronimo que significa Create Read Update Delete.
+Json(JavaScript Object Notation)->es una notacion javascript que sirve para el intercambio de datos.Es un formato estandar para datos.
+Este formato se basa en pares Atributo-valor.
+
+preguntar por anotacion path 
+preguntar por factory al buildear el retrofit.
+crear mi api de register .acomodar los packages segun la request.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

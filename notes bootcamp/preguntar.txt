@@ -1,0 +1,12 @@
+rehace select month de calendar tiene que tener el año y el mes correspondiente  
+select day : click en la posicion encontrada ?
+agregue roomsApplyBtn /locator.
+verificar method applyChanges en Clase Hotel Search.
+agruegue apply changes en el test.
+en el test los select no selecionan dia y fecha sino le hacen click al input .
+como implementar los metodos de calendar ,para seleccion de fechas en el test.
+cambie los methdos select check in and out por btn en la clase hotel search.
+hacer public los conteiner left and right en la clase calendarContainer para pode usar en el hotel serach?c
+preguntar locator childrenAgeSelection.
+
+
