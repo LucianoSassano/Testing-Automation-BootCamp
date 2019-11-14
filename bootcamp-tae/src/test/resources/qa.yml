@@ -1,0 +1,8 @@
+baseURL: https://us.despegar.com/
+remoteServerURL: http://localhost:4444/wd/hub
+appiumURL: http://localhost:4723/wd/hub
+implicitWait: 0
+explicitWait: 45
+pollingEvery: 1
+pageLoadTimeout: 60
+scriptTimeout: 10

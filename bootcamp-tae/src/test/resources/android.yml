@@ -1,0 +1,5 @@
+capabilities:
+  appPackage: com.android.calculator2
+  appActivity: com.android.calculator2.Calculator
+  platformName: android
+  deviceName: Android Simulator
